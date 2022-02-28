@@ -16,7 +16,7 @@ spec:
     listKind: TransitGatewayVPCAttachmentList
     plural: transitgatewayvpcattachments
     singular: transitgatewayvpcattachment
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

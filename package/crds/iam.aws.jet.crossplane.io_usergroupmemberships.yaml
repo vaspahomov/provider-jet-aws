@@ -16,7 +16,7 @@ spec:
     listKind: UserGroupMembershipList
     plural: usergroupmemberships
     singular: usergroupmembership
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

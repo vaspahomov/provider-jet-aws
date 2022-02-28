@@ -16,7 +16,7 @@ spec:
     listKind: BucketList
     plural: buckets
     singular: bucket
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

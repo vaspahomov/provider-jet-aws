@@ -16,7 +16,7 @@ spec:
     listKind: RouteList
     plural: routes
     singular: route
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

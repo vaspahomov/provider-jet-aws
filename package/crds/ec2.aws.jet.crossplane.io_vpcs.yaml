@@ -16,7 +16,7 @@ spec:
     listKind: VPCList
     plural: vpcs
     singular: vpc
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

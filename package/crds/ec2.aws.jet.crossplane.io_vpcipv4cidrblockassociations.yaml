@@ -16,7 +16,7 @@ spec:
     listKind: VPCIPv4CidrBlockAssociationList
     plural: vpcipv4cidrblockassociations
     singular: vpcipv4cidrblockassociation
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

@@ -16,7 +16,7 @@ spec:
     listKind: GroupList
     plural: groups
     singular: group
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

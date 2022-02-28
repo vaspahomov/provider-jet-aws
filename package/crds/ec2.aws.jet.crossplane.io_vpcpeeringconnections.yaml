@@ -16,7 +16,7 @@ spec:
     listKind: VPCPeeringConnectionList
     plural: vpcpeeringconnections
     singular: vpcpeeringconnection
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

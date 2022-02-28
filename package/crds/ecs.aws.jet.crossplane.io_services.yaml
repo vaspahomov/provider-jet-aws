@@ -16,7 +16,7 @@ spec:
     listKind: ServiceList
     plural: services
     singular: service
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

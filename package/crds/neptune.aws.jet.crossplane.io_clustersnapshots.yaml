@@ -16,7 +16,7 @@ spec:
     listKind: ClusterSnapshotList
     plural: clustersnapshots
     singular: clustersnapshot
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

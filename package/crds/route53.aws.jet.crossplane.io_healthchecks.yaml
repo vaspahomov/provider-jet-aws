@@ -16,7 +16,7 @@ spec:
     listKind: HealthCheckList
     plural: healthchecks
     singular: healthcheck
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

@@ -16,7 +16,7 @@ spec:
     listKind: DNSSECConfigList
     plural: dnssecconfigs
     singular: dnssecconfig
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

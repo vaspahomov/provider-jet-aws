@@ -70,7 +70,7 @@ func main() {
 	ws := terraform.NewWorkspaceStore(log)
 	setup := clients.TerraformSetupBuilder(*terraformVersion, *providerSource, *providerVersion)
 
-	rl := ratelimiter.NewGlobal(ratelimiter.DefaultGlobalRPS)
+	rl := ratelimiter.NewGlobal(10)
 	kingpin.FatalIfError(apis.AddToScheme(mgr.GetScheme()), "Cannot add AWS APIs to scheme")
 	kingpin.FatalIfError(controller.Setup(mgr, log, rl, setup, ws, config.GetProvider(tf.Provider()), 1), "Cannot setup AWS controllers")
 	kingpin.FatalIfError(mgr.Start(ctrl.SetupSignalHandler()), "Cannot start controller manager")

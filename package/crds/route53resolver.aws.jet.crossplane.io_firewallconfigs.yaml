@@ -16,7 +16,7 @@ spec:
     listKind: FirewallConfigList
     plural: firewallconfigs
     singular: firewallconfig
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

@@ -16,7 +16,7 @@ spec:
     listKind: FirewallRuleGroupList
     plural: firewallrulegroups
     singular: firewallrulegroup
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

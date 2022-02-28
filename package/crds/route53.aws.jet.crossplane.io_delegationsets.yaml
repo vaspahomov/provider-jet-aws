@@ -16,7 +16,7 @@ spec:
     listKind: DelegationSetList
     plural: delegationsets
     singular: delegationset
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

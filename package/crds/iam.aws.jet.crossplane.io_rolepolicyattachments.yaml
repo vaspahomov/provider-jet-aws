@@ -16,7 +16,7 @@ spec:
     listKind: RolePolicyAttachmentList
     plural: rolepolicyattachments
     singular: rolepolicyattachment
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

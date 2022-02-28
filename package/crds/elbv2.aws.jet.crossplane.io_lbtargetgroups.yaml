@@ -16,7 +16,7 @@ spec:
     listKind: LBTargetGroupList
     plural: lbtargetgroups
     singular: lbtargetgroup
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

@@ -16,7 +16,7 @@ spec:
     listKind: TransitGatewayRouteList
     plural: transitgatewayroutes
     singular: transitgatewayroute
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

@@ -16,7 +16,7 @@ spec:
     listKind: QueryLogList
     plural: querylogs
     singular: querylog
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

@@ -16,7 +16,7 @@ spec:
     listKind: AccessKeyList
     plural: accesskeys
     singular: accesskey
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

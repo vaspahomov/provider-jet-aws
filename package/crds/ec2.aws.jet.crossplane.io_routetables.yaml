@@ -16,7 +16,7 @@ spec:
     listKind: RouteTableList
     plural: routetables
     singular: routetable
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

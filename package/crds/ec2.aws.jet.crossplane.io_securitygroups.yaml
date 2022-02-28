@@ -16,7 +16,7 @@ spec:
     listKind: SecurityGroupList
     plural: securitygroups
     singular: securitygroup
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

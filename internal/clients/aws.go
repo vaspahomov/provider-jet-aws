@@ -44,7 +44,7 @@ func TerraformSetupBuilder(version, providerSource, providerVersion string) terr
 			return ps, errors.New("no providerConfigRef provided")
 		}
 		pc := &v1alpha1.ProviderConfig{}
-		if err := client.Get(ctx, types.NamespacedName{Name: mg.GetProviderConfigReference().Name}, pc); err != nil {
+		if err := client.Get(ctx, types.NamespacedName{Name: mg.GetProviderConfigReference().Name, Namespace: mg.GetNamespace()}, pc); err != nil {
 			return ps, errors.Wrap(err, "cannot get referenced Provider")
 		}
 

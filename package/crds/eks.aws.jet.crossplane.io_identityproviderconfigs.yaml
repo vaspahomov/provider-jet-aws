@@ -16,7 +16,7 @@ spec:
     listKind: IdentityProviderConfigList
     plural: identityproviderconfigs
     singular: identityproviderconfig
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

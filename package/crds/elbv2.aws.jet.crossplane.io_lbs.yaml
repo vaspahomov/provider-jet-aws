@@ -16,7 +16,7 @@ spec:
     listKind: LBList
     plural: lbs
     singular: lb
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

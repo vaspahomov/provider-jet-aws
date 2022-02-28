@@ -16,7 +16,7 @@ spec:
     listKind: QueryLogConfigAssociationList
     plural: querylogconfigassociations
     singular: querylogconfigassociation
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

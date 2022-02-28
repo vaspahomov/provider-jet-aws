@@ -16,7 +16,7 @@ spec:
     listKind: TransitGatewayRouteTablePropagationList
     plural: transitgatewayroutetablepropagations
     singular: transitgatewayroutetablepropagation
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

@@ -16,7 +16,7 @@ spec:
     listKind: ParameterGroupList
     plural: parametergroups
     singular: parametergroup
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

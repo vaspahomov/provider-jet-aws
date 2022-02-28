@@ -16,7 +16,7 @@ spec:
     listKind: ZoneAssociationList
     plural: zoneassociations
     singular: zoneassociation
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status

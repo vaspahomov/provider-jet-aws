@@ -16,7 +16,7 @@ spec:
     listKind: HostedZoneDNSSECList
     plural: hostedzonednssecs
     singular: hostedzonednssec
-  scope: Cluster
+  scope: Namespaced
   versions:
   - additionalPrinterColumns:
     - jsonPath: .status.conditions[?(@.type=='Ready')].status
