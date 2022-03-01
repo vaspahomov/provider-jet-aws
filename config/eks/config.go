@@ -21,6 +21,7 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/crossplane/crossplane-runtime/pkg/fieldpath"
 	"github.com/crossplane/terrajet/pkg/config"
 	"github.com/pkg/errors"
 
@@ -61,7 +62,15 @@ func Configure(p *config.Provider) { // nolint:gocyclo
 				"node_group_name_prefix",
 			},
 			GetExternalNameFn: config.IDAsExternalName,
-			GetIDFn:           config.ExternalNameAsID,
+			GetIDFn: func(ctx context.Context, externalName string, parameters map[string]interface{}, providerConfig map[string]interface{}) (string, error) {
+				r, err := fieldpath.Pave(parameters).GetString("spec.forProvider.clusterName")
+				if fieldpath.IsNotFound(err) {
+					// Region is not required for all resources, e.g. resource in "iam"
+					// group.
+					return "", nil
+				}
+				return fmt.Sprintf("%s:%s", r, externalName), nil
+			},
 		}
 		r.References = config.References{
 			"cluster_name": {
